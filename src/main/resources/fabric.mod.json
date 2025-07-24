@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "rolpol",
+	"version": "${version}",
+	"name": "Roly Poly",
+	"description": "Adds isopods to minecraft",
+	"authors": [
+		"gecko!"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/rolpol/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.gecko.rolpol.RolyPoly"
+		],
+		"fabric-datagen": [
+			"net.gecko.rolpol.RolyPolyDataGenerator"
+		],
+		"client": [
+			"net.gecko.rolpol.RolyPolyClient"
+		]
+	},
+	"mixins": [
+		"rolpol.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

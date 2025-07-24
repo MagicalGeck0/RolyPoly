@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "net.gecko.rolpol.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"RolPolMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
