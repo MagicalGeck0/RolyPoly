@@ -14,7 +14,7 @@ import net.minecraft.util.Identifier;
 public class ModItems {
 
     public static final Item ISOPOD_SPAWN_EGG = registerItem("isopod_spawn_egg", new SpawnEggItem(ModEntities.ISOPOD, 0xbebebe, 0xbcdc694, new Item.Settings()));
-    public static final Item BUGNET = registerItem("bugnet", new BugnetItem(new Item.Settings()));
+    public static final Item BUGNET = registerItem("bugnet", new BugnetItem(new Item.Settings().maxDamage(1)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(RolyPoly.MOD_ID, name), item);

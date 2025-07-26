@@ -22,6 +22,7 @@ public class ModDataComponentTypes extends DataComponentTypes {
     public static final ComponentType<NbtComponent> BUGNET_SLOT_7 = registerModDataComponentType("bugnet_slot_7");
     public static final ComponentType<NbtComponent> BUGNET_SLOT_8 = registerModDataComponentType("bugnet_slot_8");
     public static final ComponentType<NbtComponent> BUGNET_SLOT_9 = registerModDataComponentType("bugnet_slot_9");
+    public static final ComponentType<NbtComponent> BLISSED = registerModDataComponentType("blissed");
 
     public static void registerModDataComponentTypes(){
         RolyPoly.LOGGER.info("Registering Mod Data Component Types for " + RolyPoly.MOD_ID);
@@ -29,7 +30,6 @@ public class ModDataComponentTypes extends DataComponentTypes {
 
     @SuppressWarnings({"unchecked", "rawtypes"})
     private static <T> ComponentType<T> register(String id, UnaryOperator<ComponentType.Builder<T>> builderOperator) {
-        // Builder<Object> returned by builder() is safely treated as Builder<T> because T is only used within builderOperator
         ComponentType.Builder<T> builder = (ComponentType.Builder<T>) (ComponentType.Builder) ComponentType.builder();
         return Registry.register(Registries.DATA_COMPONENT_TYPE, id, builderOperator.apply(builder).build());
     }
