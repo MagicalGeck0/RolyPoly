@@ -11,7 +11,7 @@ import net.minecraft.util.Identifier;
 public class ModEntities {
     public static final EntityType<IsopodEntity> ISOPOD = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(RolyPoly.MOD_ID, "isopod"),
-            EntityType.Builder.create(IsopodEntity::new, SpawnGroup.UNDERGROUND_WATER_CREATURE)
+            EntityType.Builder.create(IsopodEntity::new, SpawnGroup.AMBIENT)
                     .dimensions(1f,1f).build());
 
 
